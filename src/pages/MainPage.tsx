@@ -52,6 +52,7 @@ const MainPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     getHot3();
     getMyCard(userInfo.userId);
   }, []);

@@ -12,6 +12,7 @@ const Detail = (props: Props) => {
   const { id } = useParams();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const getCardInfo = async () => {
       const data = await getTokenApi.cardDetail(id);
       setCardInfo(data);
