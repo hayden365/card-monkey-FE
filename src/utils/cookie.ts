@@ -7,7 +7,7 @@ const cookies = new Cookies();
 export const setCookie = (token: string) => {
   return cookies.set("token", token, {
     path: "/",
-    maxAge: 1,
+    maxAge: 3600,
   });
 };
 
@@ -22,3 +22,23 @@ export const removeCookie = () => {
     maxAge: -1,
   });
 };
+
+// export const authCheck = (pathname: string, navigate: any) => {
+//   const token = getCookie();
+//   axios
+//     .get(VITE_URL + `/info/apply`, {
+//       headers: { Authorization: `Bearer ${token}` },
+//     })
+//     .then((result) => {
+//       if (pathname === "/login" || pathname === "/signup") {
+//         navigate(`/`);
+//       }
+//     })
+//     .catch((error) => {
+//       removeCookie();
+//       if (pathname === `/signup`) {
+//         return;
+//       }
+//       navigate(`/login`);
+//     });
+// };
