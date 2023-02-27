@@ -21,6 +21,10 @@
 - 1차: 2023.2.13 ~ 2023.2.24(총 12일)
 
 ### 링크 모음
+  
+<a href="https://card-monkey.netlify.app">
+  <img src="https://img.shields.io/badge/배포사이트-F4AA3C?style=for-the-badge&logo=SurveyMonkey&logoColor=black" />
+</a>&nbsp;&nbsp;  
 <a href="https://cold-clave-816.notion.site/0cb8268940ad439292a5cc522e5964a7">
   <img src="https://img.shields.io/badge/팀노션-e5e5e5?style=for-the-badge&logo=notion&logoColor=black" />
 </a>
