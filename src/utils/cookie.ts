@@ -1,5 +1,6 @@
 import { Cookies, useCookies } from "react-cookie";
 import axios from "axios";
+import { redirect, useNavigate } from "react-router";
 const { VITE_URL } = import.meta.env;
 
 const cookies = new Cookies();
@@ -7,7 +8,7 @@ const cookies = new Cookies();
 export const setCookie = (token: string) => {
   return cookies.set("token", token, {
     path: "/",
-    maxAge: 3600,
+    maxAge: 2,
   });
 };
 
