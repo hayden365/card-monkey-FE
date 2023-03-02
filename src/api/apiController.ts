@@ -1,7 +1,7 @@
 import axios from "axios";
-import { getCookie, removeCookie } from "../utils/cookie";
+import { getCookie, removeCookie, setCookie } from "../utils/cookie";
 
-const { VITE_URL } = import.meta.env;
+const { VITE_URL, VITE_TOKEN } = import.meta.env;
 
 const instance = axios.create({
   baseURL: VITE_URL,
@@ -10,6 +10,7 @@ const instance = axios.create({
 
 instance.interceptors.request.use(
   function (config) {
+    setCookie(VITE_TOKEN);
     const token = getCookie();
     if (token) config.headers["Authorization"] = `Bearer ${token}`;
     return config;
@@ -21,7 +22,6 @@ instance.interceptors.request.use(
 
 instance.interceptors.response.use(
   function (response) {
-    console.log(window.location.href);
     return response;
   },
   function (error) {

@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <NotFound />,
-    loader: () => tokenLoader(),
+    loader: tokenLoader,
     children: [
       {
         index: true,
@@ -52,12 +52,12 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
-    loader: () => goHome(),
+    loader: goHome,
   },
   {
     path: "/signUp",
     element: <SignUp />,
-    loader: () => goHome(),
+    loader: goHome,
   },
 ]);
 
